@@ -1,0 +1,3 @@
+cloudbees-folder:latest
+powershell:latest
+swarm:latest

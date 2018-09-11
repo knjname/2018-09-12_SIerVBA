@@ -1,0 +1,20 @@
+repositories { mavenCentral(); maven { url "https://repo.jenkins-ci.org/releases/" } }
+configurations { tool }
+dependencies { tool "org.jenkins-ci.plugins:swarm-client:3.12" }
+
+task start(type: JavaExec) {
+    classpath = configurations.tool
+    main = "hudson.plugins.swarm.Client"
+    args([
+        "-master", "http://localhost:8080",
+        "-name", "VBAWindows",
+        "-username", "admin",
+        "-password", "admin",
+        "-fsroot", "C:/jenkinsws",
+        "-executors", "1",
+        "-deleteExistingClients",
+        "-labels", ["vba", "windows"].join(" "),
+        // "-mode", "exclusive",
+    ])
+}
+defaultTasks "start"
