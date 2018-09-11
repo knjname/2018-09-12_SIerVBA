@@ -10,11 +10,11 @@ task start(type: JavaExec) {
         "-name", "VBAWindows",
         "-username", "admin",
         "-password", "admin",
-        "-fsroot", "C:/jenkinsws",
+        "-fsroot", "./jenkinsws",
         "-executors", "1",
         "-deleteExistingClients",
         "-labels", ["vba", "windows"].join(" "),
-        // "-mode", "exclusive",
+        "-mode", "exclusive",
     ])
 }
 defaultTasks "start"
