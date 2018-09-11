@@ -19,6 +19,7 @@ $ docker-compose up
 2. JDKインストール済みのWindowsマシンより、下記コマンドを実行すればスレーブとして繋がります。 (Swarm Plugin経由)
 
 ```
+$ cd jenkinsslave
 $ gradlew.bat
 ```
 
