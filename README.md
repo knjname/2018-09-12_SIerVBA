@@ -15,7 +15,8 @@ $ docker-compose up
 
 ## Jenkins (スレーブ) の立ち上げ方
 
-JDKインストール済みのWindowsマシンより、下記コマンドを実行すればスレーブとして繋がります。 (Swarm Plugin経由)
+1. `build.gradle` の中のJenkinsのURLなど適宜書き換えてください。
+2. JDKインストール済みのWindowsマシンより、下記コマンドを実行すればスレーブとして繋がります。 (Swarm Plugin経由)
 
 ```
 $ gradlew.bat
